@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated About Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            background-color: black;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+            color: white;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            width: 90%;
+            max-width: 1400px;
+            margin-top: 20px;
+        }        
+        .card {
+            background: #1e1e1e;
+            color: white;
+            width: 400px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: bounceIn 1s ease-in-out forwards;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background: #292929;
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+        }
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #00eaff;
+        }
+        .card h1, .card h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            background: linear-gradient(to right, #00eaff, #007bff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card h4 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff8c00;
+        }
+        .card p {
+            font-size: 16px;
+            color: #f0f0f0;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 14px 22px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        .back-button {
+            margin-top: 30px;
+            padding: 14px 24px;
+            font-size: 18px;
+            background: linear-gradient(to right, #28a745, #34d399);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s;
+        }
+        .back-button:hover {
+            background: linear-gradient(to right, #218838, #22c55e);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Team Members</h1>
+    <div class="container">
+        <div class="card">
+            <img src="photoman.jpg" alt="Profile Picture">
+            <h1>BHARGAV SUNAKRI</h1>
+            <h4>Role : Web Developer & UI/UX Designer & Team Leader</h4>
+            <p>Hall Ticket No: 22FF1A0541</p>
+            <p>Branch: COMPUTER SCIENCE AND ENGINEERING</p>
+            <p>Phone: +91 8106012509</p>
+            <p>Email : bhargavsunkari13@gmail.com</p>
+        </div>
+        <div class="card">
+            <img src="babbulu_pic.jpg" alt="Profile Picture">
+            <h1>RAVI NARAYANA BRAHMA</h1>
+            <h4>Role : Back End Developer & Team Member</h4>
+            <p>Hall Ticket No: 22FF1A4201</p>
+            <p>Branch: ARTIFICIAL INTELLIGENCE & MACHINE LEARNING</p>
+            <p>Phone: +91 6300947536</p>
+            <p>Email : ravinaryanab25@gmail.com</p>
+        </div>
+        <div class="card">
+            <img src="kareem_profile.jpg" alt="Profile Picture">
+            <h1>SK . Kareem Basha</h1>
+            <h4>Role : Front End Developer & Team Member</h4>
+            <p>Hall Ticket No: 22FF1A0539</p>
+            <p>Branch: COMPUTER SCIENCE AND ENGINEERING</p>
+            <p>Phone: +91 8639684754</p>
+            <p>Email : kareemsk00p@gmail.com</p>
+        </div>
+        <div class="card">
+            <img src="santosh_profile.jpg" alt="Profile Picture">
+            <h1>SANTOSH KUMAR GEMBALI</h1>
+            <h4>Role : Front End Developer & Team Member</h4>
+            <p>Hall Ticket No: 22FF1A0512</p>
+            <p>Branch: COMPUTER SCIENCE AND ENGINEERING</p>
+            <p>Phone: +91 7569946814</p>
+            <p>Email : gembalisantoshkumar14@gmail.com</p>
+        </div>
+        <div class="card">
+            <img src="murali_profile.webp" alt="Profile Picture">
+            <h1>H.R. MURALI MOHAN (C1 & C2 MR)</h1>
+            <h4>Role : Task Manager & Team Member</h4>
+            <p>Hall Ticket No: 22FF1A0517</p>
+            <p>Branch: COMPUTER SCIENCE AND ENGINEERING</p>
+            <p>Phone: +91 7207825622</p>
+            <p>Email : h.ramappa.gari.muralimohan@gmail.com</p>
+        </div>
+        <div class="card">
+            <img src="sai_profile.jpg" alt="Profile Picture">
+            <h1>SAI KUMAR AVULA</h1>
+            <h4>Role:  Task Manager & Team Member</h4>
+            <p>Hall Ticket No: 22FF1A0505</p>
+            <p>Branch: COMPUTER SCIENCE AND ENGINEERING</p>
+            <p>Phone: +91 7013037424</p>
+            <p>Email : avula1801@gmail.com</p>
+        </div>
+        <div class="card">
+            <img src="pavan_profile.jpg" alt="Profile Picture">
+            <h1>PAVAN KUMAR SINGISETTI</h1>
+            <h4>Role: Host Organizer & Team Member</h4>
+            <p>Hall Ticket No: 22FF1A0540</p>
+            <p>Branch: COMPUTER SCIENCE AND ENGINEERING</p>
+            <p>Phone: +91 9398207933</p>
+            <p>Email : pavansingisetti@gmail.com</p>
+        </div>
+        <div class="card">
+            <img src="naveen_profuile.jpg" alt="Profile Picture">
+            <h1>NAVEEN KUMAR BUKKA </h1>
+            <h4>Role: Host Organizer & Team Member</h4>
+            <p>Hall Ticket No: 22FF1A0507</p>
+            <p>Branch: COMPUTER SCIENCE AND ENGINEERING</p>
+            <p>Phone: +91 9346457062</p>
+            <p>Email : oyeeitsokk@gmail.com</p>
+        </div>
+    </div>
+    <button class="back-button" onclick="window.location.href='home.html'">Back to Home</button>
+</body>
+</html>

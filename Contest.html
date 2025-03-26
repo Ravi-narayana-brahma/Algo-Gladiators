@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #ff8c00, #ff0080);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(255, 140, 0, 0.7); }
+            to { text-shadow: 0 0 20px rgba(255, 0, 128, 0.9); }
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            width: 300px;
+            opacity: 0;
+            animation: slideIn 0.7s ease-in-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .card:hover {
+            transform: scale(1.15) rotate(3deg);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 80%);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+        .card:hover::before {
+            top: -20%;
+            left: -20%;
+        }
+        .card h2 {
+            margin-bottom: 10px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        .back-button {
+            font-family: 'Minecraftia', sans-serif;
+            text-transform: uppercase;
+            width: 150px;
+            margin-top: 10px;
+            padding: 10px;
+            background: gray;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: not-allowed;
+            transition: background 0.3s ease;
+        }
+        .back-button.active {
+            background: #28a745;
+            cursor: pointer;
+        }
+        .back-button.active:hover {
+            background: #218838;
+            border: dotted;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contest</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Project Euler's</h2>
+            <p>Challenge yourself with mathematical and computational problems.</p>
+            <button class="button">Join Now</button>
+        </div>
+        <div class="card">
+            <h2>Fast Typo</h2>
+            <p>Test your typing speed and accuracy in this fast-paced challenge.</p>
+            <button class="button">Join Now</button>
+        </div>
+        <div class="card">
+            <h2>Who am I?</h2>
+            <p>A fun guessing game to test your knowledge and deduction skills.</p>
+            <button class="button">Join Now</button>
+        </div>
+        <div class="card">
+            <h2>Ghost Typing</h2>
+            <p>A thrilling typing challenge where words disappear as you type.</p>
+            <button class="button">Join Now</button>
+        </div>
+    </div>
+    <button class="back-button active" onclick="window.location.href='home.html'">Back to Home</button>
+</body>
+</html>

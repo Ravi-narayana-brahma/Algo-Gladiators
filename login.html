@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoGladiators ⚔🔥</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="Algo_logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://wallpaperaccess.com/full/1691984.jpg");
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .img_logo {
+            width: 100px;
+            padding: 10%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: -50px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .moon {
+            margin-top: -60px;
+            color: red;
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 2s ease-in;
+        }
+
+        @font-face {
+            font-family: 'Minecraftia';
+            src: url('Minecraftia-Regular.ttf') format('truetype');
+        }
+
+        .Title {
+            font-family: 'Minecraftia', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            margin: 10px;
+            font-weight: 700;
+        }
+
+        .login-container {
+            height: 450px;
+            margin-top: 20px;
+            background: #9797a4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+            width: 450px;
+            text-align: center;
+            animation: scaleIn 1.5s ease-in-out;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+            /* Removed the rotation animation */
+        }
+
+        .glowing-text {
+            font-family: monospace;
+            text-shadow: -1px -1px 0 rgb(252, 0, 0),
+                1px -1px 0 rgb(231, 0, 0),
+                -1px 1px 0 rgb(255, 0, 0),
+                1px 1px 0 rgb(237, 0, 0);
+        }
+
+        .login-container button {
+            font-family: 'Minecraftia', sans-serif;
+            text-transform: uppercase;
+            width: 50%;
+            margin-top: 10px;
+            padding: 10px;
+            background: gray;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: not-allowed;
+            transition: background 0.3s ease;
+        }
+
+        .login-container button.active {
+            background: #28a745;
+            cursor: pointer;
+        }
+
+        .login-container button.active:hover {
+            background: #218838;
+            border: dotted;
+            text-align: center;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-row justify-content-center mt-3">
+        <div>
+            <img class="img_logo" src="logo_img.jpg" alt="">
+        </div>
+        <div>
+            <h1 style="color: #d511d5;font-family:monospace;  font-size:60px; text-shadow: 0 0 20px white, 0 0 1px white, 0 0 2px white;"
+                class="mb-5">
+                VIKALPA-2K25</h1>
+        </div>
+    </div>
+    <h3 class="Title mt-2 ">AlgoGladiators ⚔🔥</h3>
+    <div class="login">
+        <div class="login-container">
+            <img src="Algo_logo.jpg" alt="">
+            <h2 class="Title text-success mt-5">Login</h2>
+            <form id="loginForm">
+                <input type="text" id="hallTicket" placeholder="Enter Hall Ticket No" required>
+                <button type="submit" id="loginButton" disabled>Login</button>
+            </form>
+            <p id="errorMessage" class="error"></p>
+        </div>
+    </div>
+    <script>
+        async function fetchHallTickets() {
+            try {
+                const response = await fetch("Hackathon (Responses).csv"); // Ensure the CSV file is in the same directory
+                const data = await response.text();
+                const rows = data.split(/\r?\n/).map(row => row.split(",")); // Handle different newline formats
+
+                if (rows.length < 2) {
+                    console.error("CSV file seems empty or not formatted properly.");
+                    return [];
+                }
+
+                // Get the header row and trim column names
+                const headers = rows[0].map(header => header.trim().toLowerCase());
+                const hallTicketIndex = headers.indexOf("hall ticket no"); // Case insensitive
+
+                if (hallTicketIndex === -1) {
+                    console.error("Hall Ticket NO column not found. Headers:", headers);
+                    return [];
+                }
+
+                // Extract hall ticket numbers and remove empty values
+                return rows.slice(1)
+                    .map(row => row[hallTicketIndex]?.trim()) // Avoid errors on missing values
+                    .filter(Boolean); // Remove empty values
+            } catch (error) {
+                console.error("Error fetching CSV:", error);
+                return [];
+            }
+        }
+
+        document.getElementById("hallTicket").addEventListener("input", function () {
+            const hallTicketNo = this.value.trim();
+            const loginButton = document.getElementById("loginButton");
+
+            if (hallTicketNo.length === 10) {
+                loginButton.disabled = false;
+                loginButton.classList.add("active");
+            } else {
+                loginButton.disabled = true;
+                loginButton.classList.remove("active");
+            }
+        });
+        document.getElementById("loginForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const hallTicketNo = document.getElementById("hallTicket").value.trim();
+            const validHallTickets = await fetchHallTickets();
+
+            console.log("Hall Ticket Entered:", hallTicketNo);
+            console.log("Valid Hall Tickets List:", validHallTickets);
+
+            if (validHallTickets.includes(hallTicketNo)) {
+                localStorage.setItem("loggedInHallTicket", hallTicketNo); // Store Hall Ticket
+                window.location.href = "home.html"; // Redirect to Home Page
+            } else {
+                document.getElementById("errorMessage").textContent = "YOU ARE NOT REGISTERED";
+            }
+        });        
+    </script>
+</body>
+
+</html>
