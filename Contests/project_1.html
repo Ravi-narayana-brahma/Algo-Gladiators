@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Euler's Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background: #1a1a2e;
+            color: white;
+            overflow: hidden;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            animation: backgroundMove 10s infinite alternate;
+        }
+
+        .container {
+            max-width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.8);
+            background: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2em;
+            animation: textGlow 1.5s infinite alternate;
+        }
+
+        .question {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #ff5733;
+            text-shadow: 0px 0px 15px #ff5733;
+        }
+
+        .input-output {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #00ff99;
+            text-shadow: 0px 0px 10px #00ff99;
+        }
+
+        #startButton,
+        #proceedButton {
+            padding: 12px 24px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #ffcc00, #ff6600);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+            animation: pulse 2s infinite;
+        }
+
+        #startButton:hover,
+        #proceedButton:hover {
+            background: linear-gradient(90deg, #ff6600, #ffcc00);
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0px 0px 10px #00ffcc;
+            }
+
+            to {
+                text-shadow: 0px 0px 20px #00ffcc;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+            }
+
+            50% {
+                box-shadow: 0px 0px 20px rgba(0, 255, 204, 1);
+            }
+
+            100% {
+                box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.8);
+            }
+        }
+
+        @keyframes backgroundMove {
+            from {
+                background-position: 0% 0%;
+            }
+
+            to {
+                background-position: 100% 100%;
+            }
+        }
+
+        .instructions {
+            font-size: 1.2em;
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .warning {
+            color: #ff5733;
+            font-weight: bold;
+            text-shadow: 0px 0px 10px #ff5733;
+        }
+
+        .important {
+            color: #00ffcc;
+            font-weight: bold;
+            text-shadow: 0px 0px 10px #00ffcc;
+        }
+    </style>
+    <script>
+        function showExam() {
+            document.getElementById("instructions").style.display = "none";
+            document.getElementById("exam").style.display = "block";
+        }
+
+        function startExam() {
+            document.getElementById("startButton").style.display = "none";
+            window.open('https://www.programiz.com/c-programming/online-compiler/', '_blank');
+        }
+        function checkProject1Status(isPassed) {
+            if (isPassed) {
+                window.location.href = "exam_completed.html"; // Show exam completed page
+                setTimeout(() => {
+                    window.location.href = "PROJECT_2.html"; // Redirect to Project 2 after 3 seconds
+                }, 3000);
+            } else {
+                window.location.href = "disqualified.html"; // Redirect to disqualified page
+            }
+        }
+
+        // Example: Replace true/false dynamically based on actual result
+        checkProject1Status(true); 
+    </script>
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <!-- Instructions Section -->
+    <div class="container" id="instructions">
+        <h1>Exam Instructions Round-1</h1>
+        <p class="instructions">
+            1️⃣ <span class="warning">No other tabs should be open</span> while writing the code.
+            If our system detects another tab, you will be <span class="warning">disqualified</span>.
+            <br><br>
+            2️⃣ There is a strict <span class="important">time limit 5 mins</span>. Ensure you submit your solution
+            before time runs out.
+            <br><br>
+            3️⃣ Your program will be evaluated based on <span class="important">test cases</span>.
+            Make sure your code passes all test cases to get full marks.
+        </p>
+        <button id="proceedButton" onclick="showExam()">Proceed to Exam</button>
+    </div>
+
+    <!-- Exam Section (Initially Hidden) -->
+    <div class="container" id="exam" style="display: none;">
+        <h1>Project Euler's</h1>
+        <p class="question">Question: Write a code to add an integer and a float number.</p>
+        <p class="input-output">INPUT:<br> a = 10 <br> b = 20.1</p>
+        <p class="input-output">EXPECTED OUTPUT:<br> 30</p>
+        <button id="startButton" onclick="startExam()">Start Exam</button>
+    </div>
+</body>
+
+</html>
