@@ -152,19 +152,6 @@
             document.getElementById("startButton").style.display = "none";
             window.open('https://www.programiz.com/c-programming/online-compiler/', '_blank');
         }
-        function checkProject1Status(isPassed) {
-            if (isPassed) {
-                window.location.href = "exam_completed.html"; // Show exam completed page
-                setTimeout(() => {
-                    window.location.href = "PROJECT_2.html"; // Redirect to Project 2 after 3 seconds
-                }, 3000);
-            } else {
-                window.location.href = "disqualified.html"; // Redirect to disqualified page
-            }
-        }
-
-        // Example: Replace true/false dynamically based on actual result
-        checkProject1Status(true); 
     </script>
 </head>
 
